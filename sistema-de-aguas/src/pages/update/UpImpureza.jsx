@@ -1,38 +1,41 @@
 import "../page-styles/PageStyles.css";
 import { useState } from "react";
 
-const UpImpureza = () => {
+const InsImpureza = () => {
   const [Nome, setNome] = useState("");
-  const [impureza, setimpureza] = useState("");
+  const [Idamostra, setIdamostra] = useState("");
   const [Unidade, setUnidade] = useState("");
   const [Tipo, setTipo] = useState("");
   const [Vtotal, setVtotal] = useState("");
 
-  const update = async (e) => {
+  const insertion = async (e) => {
     e.preventDefault();
 
-    const updateSetWhere = {
-      update: "impureza",
-      set: `unidade = '${Unidade}', tipo= '${Tipo}', vtotal= ${Vtotal}`,
-      where: `nome = '${Nome}' and impureza = '${impureza}'`,
+    const insertIntoValues = {
+      insertInto: "impureza",
+      nome: Nome,
+      idamostra: Idamostra,
+      unidade: Unidade,
+      tipo: Tipo,
+      vtotal: Vtotal,
     };
 
-    console.log(updateSetWhere);
+    console.log(insertIntoValues);
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updateSetWhere),
+      body: JSON.stringify(insertIntoValues),
     };
 
-    await fetch("http://localhost:1000/atualizar", options);
+    await fetch("http://localhost:1000/inserir-impureza", options);
   };
 
   return (
     <div className="FormDiv">
-      <form className="Forms" onSubmit={update}>
-        <label className="Labels">Nome da impureza a ser atualizada</label>
+      <form className="Forms" onSubmit={insertion}>
+        <label className="Labels">Nome da impureza</label>
         <input
           className="Inputs"
           type="text"
@@ -41,15 +44,13 @@ const UpImpureza = () => {
           onChange={(e) => setNome(e.target.value)}
         />
 
-        <label className="Labels">
-          Rotulo da analise da impureza a ser atualizada
-        </label>
+        <label className="Labels">Rotulo da analise</label>
         <input
           className="Inputs"
           type="number"
           required
-          value={impureza}
-          onChange={(e) => setimpureza(e.target.value)}
+          value={Idamostra}
+          onChange={(e) => setIdamostra(e.target.value)}
         />
 
         <label className="Labels">Unidade</label>
@@ -79,10 +80,10 @@ const UpImpureza = () => {
           onChange={(e) => setVtotal(e.target.value)}
         />
 
-        <button className="SendButton">ATUALIZAR</button>
+        <button className="SendButton">ADICIONAR</button>
       </form>
     </div>
   );
 };
 
-export default UpImpureza;
+export default InsImpureza;
