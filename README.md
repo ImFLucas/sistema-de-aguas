@@ -1,4 +1,4 @@
-# sistema-de-aguas
+# Sistema de Águas
 Trabalho de banco de dados para o sistema de gerenciamento de parâmetros de qualidade de água, abreviado como sistema de aguas.
 
 É necessário ter o SGBD postgres instalado e alterar a senha do banco de dados, e a porta, se necessário, na pasta server/db/index.js
