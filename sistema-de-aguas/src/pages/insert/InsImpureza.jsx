@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const InsImpureza = () => {
   const [Nome, setNome] = useState("");
-  const [Idamostra, setIdamostra] = useState("");
+  const [impureza, setimpureza] = useState("");
   const [Unidade, setUnidade] = useState("");
   const [Tipo, setTipo] = useState("");
   const [Vtotal, setVtotal] = useState("");
@@ -12,9 +12,9 @@ const InsImpureza = () => {
     e.preventDefault();
 
     const insertIntoValues = {
-      insertInto: "amostra",
+      insertInto: "impureza",
       nome: Nome,
-      idamostra: Idamostra,
+      impureza: impureza,
       unidade: Unidade,
       tipo: Tipo,
       vtotal: Vtotal,
@@ -49,8 +49,8 @@ const InsImpureza = () => {
           className="Inputs"
           type="number"
           required
-          value={Idamostra}
-          onChange={(e) => setIdamostra(e.target.value)}
+          value={impureza}
+          onChange={(e) => setimpureza(e.target.value)}
         />
 
         <label className="Labels">Unidade</label>
