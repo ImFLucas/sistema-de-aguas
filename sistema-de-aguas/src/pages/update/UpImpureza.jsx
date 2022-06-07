@@ -1,41 +1,38 @@
 import "../page-styles/PageStyles.css";
 import { useState } from "react";
 
-const InsImpureza = () => {
+const UpImpureza = () => {
   const [Nome, setNome] = useState("");
   const [Idamostra, setIdamostra] = useState("");
   const [Unidade, setUnidade] = useState("");
   const [Tipo, setTipo] = useState("");
   const [Vtotal, setVtotal] = useState("");
 
-  const insertion = async (e) => {
+  const update = async (e) => {
     e.preventDefault();
 
-    const insertIntoValues = {
-      insertInto: "impureza",
-      nome: Nome,
-      idamostra: Idamostra,
-      unidade: Unidade,
-      tipo: Tipo,
-      vtotal: Vtotal,
+    const updateSetWhere = {
+      update: "impureza",
+      set: `unidade = '${Unidade}', tipo= '${Tipo}', vtotal= ${Vtotal}`,
+      where: `nome = '${Nome}' and idamostra = '${Idamostra}'`,
     };
 
-    console.log(insertIntoValues);
+    console.log(updateSetWhere);
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(insertIntoValues),
+      body: JSON.stringify(updateSetWhere),
     };
 
-    await fetch("http://localhost:1000/inserir-impureza", options);
+    await fetch("http://localhost:1000/atualizar", options);
   };
 
   return (
     <div className="FormDiv">
-      <form className="Forms" onSubmit={insertion}>
-        <label className="Labels">Nome da impureza</label>
+      <form className="Forms" onSubmit={update}>
+        <label className="Labels">Nome da impureza a ser atualizada</label>
         <input
           className="Inputs"
           type="text"
@@ -44,7 +41,9 @@ const InsImpureza = () => {
           onChange={(e) => setNome(e.target.value)}
         />
 
-        <label className="Labels">Rotulo da analise</label>
+        <label className="Labels">
+          Rotulo da analise da impureza a ser atualizada
+        </label>
         <input
           className="Inputs"
           type="number"
@@ -80,10 +79,10 @@ const InsImpureza = () => {
           onChange={(e) => setVtotal(e.target.value)}
         />
 
-        <button className="SendButton">ADICIONAR</button>
+        <button className="SendButton">ATUALIZAR</button>
       </form>
     </div>
   );
 };
 
-export default InsImpureza;
+export default UpImpureza;
