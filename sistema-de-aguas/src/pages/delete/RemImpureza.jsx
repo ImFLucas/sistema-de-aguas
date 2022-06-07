@@ -8,7 +8,7 @@ const RemImpureza = () => {
   const remove = async (e) => {
     e.preventDefault();
     //prettier-ignore
-    const deleteFromWhere = { deleteFrom: "impureza", where: `idamostra = ${Identificador} and nome = ${Nome}` };
+    const deleteFromWhere = { deleteFrom: "impureza", where: `idamostra = ${Identificador} and nome = '${Nome}'` };
 
     console.log(deleteFromWhere);
     const options = {
