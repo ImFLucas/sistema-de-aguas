@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const UpImpureza = () => {
   const [Nome, setNome] = useState("");
-  const [Idamostra, setIdamostra] = useState("");
+  const [impureza, setimpureza] = useState("");
   const [Unidade, setUnidade] = useState("");
   const [Tipo, setTipo] = useState("");
   const [Vtotal, setVtotal] = useState("");
@@ -12,9 +12,9 @@ const UpImpureza = () => {
     e.preventDefault();
 
     const updateSetWhere = {
-      update: "amostra",
+      update: "impureza",
       set: `unidade = '${Unidade}', tipo= '${Tipo}', vtotal= ${Vtotal}`,
-      where: `nome = '${Nome}' and idamostra = '${Idamostra}'`,
+      where: `nome = '${Nome}' and impureza = '${impureza}'`,
     };
 
     console.log(updateSetWhere);
@@ -48,8 +48,8 @@ const UpImpureza = () => {
           className="Inputs"
           type="number"
           required
-          value={Idamostra}
-          onChange={(e) => setIdamostra(e.target.value)}
+          value={impureza}
+          onChange={(e) => setimpureza(e.target.value)}
         />
 
         <label className="Labels">Unidade</label>
