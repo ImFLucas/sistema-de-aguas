@@ -1,0 +1,93 @@
+/************************** NAVBAR **************************************/
+.NavBar {
+  background-color: black;
+  height: 75px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.LinkBox {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.LogoH1 {
+  background-color: black;
+  color: white;
+  align-self: center;
+  font-size: xx-large;
+}
+.LogoH1:hover {
+  color: aquamarine;
+}
+
+.Logo {
+  color: white;
+  text-decoration: none;
+  padding-left: 2%;
+  align-self: center;
+}
+
+.Logo:hover {
+  color: aquamarine;
+}
+
+.Links {
+  padding: 10px;
+  color: white;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.Links:hover {
+  color: aquamarine;
+}
+/*********************************************************************************/
+.App {
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.Caixa {
+  display: flex;
+  flex-direction: row;
+}
+
+.Lista {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Enviar {
+}
+
+.Navbar {
+  background-color: red;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.Coluna {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.Linha {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.Tabela {
+  background-color: black;
+  justify-self: center;
+  width: 100%;
+  border-radius: 10px;
+}

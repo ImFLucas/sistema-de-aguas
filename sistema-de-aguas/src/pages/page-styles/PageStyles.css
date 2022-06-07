@@ -1,0 +1,139 @@
+.NavOverview {
+  margin-left: 25%;
+}
+.NavOverviewLink {
+  text-decoration: none;
+  color: black;
+  margin: 10 px;
+}
+.NavOverviewLink:hover {
+  color: aquamarine;
+}
+
+.NavOps {
+  text-decoration: none;
+  margin-top: 25%;
+  margin-left: 25%;
+  justify-content: center;
+}
+
+.NavOps2 {
+  text-decoration: none;
+  margin-top: 5%;
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.NavOpsLink {
+  text-decoration: none;
+  color: black;
+  margin: 10 px;
+}
+.NavOpsLink:hover {
+  color: aquamarine;
+}
+/***********************************************/
+.App {
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.Caixa {
+  display: flex;
+  flex-direction: row;
+}
+
+.Lista {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Enviar {
+}
+
+.Field {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 15px;
+  width: 25%;
+  border: solid black;
+  border-width: 3px;
+  align-content: center;
+  justify-content: center;
+}
+
+.TableField {
+  background-color: white;
+  border-radius: 15px;
+  width: 75%;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.FormDiv {
+  background-color: white;
+  border-radius: 15px;
+  border: solid #000;
+  border-width: 5px;
+  padding: 10px;
+  margin: 5%;
+}
+.Forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.Labels {
+  align-self: center;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.Inputs {
+  display: block;
+  height: 20%;
+  margin: 10px 0;
+  padding: 3px 10px;
+  align-self: center;
+  border-radius: 5px;
+  border: solid #000;
+  border-width: 5px;
+}
+
+.SendButton {
+  width: 200px;
+  height: 50px;
+  padding: 6px 10px;
+  align-self: center;
+  border-radius: 10px;
+  border-width: 5px;
+  background-color: white;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.SendButton:hover {
+  border-color: aquamarine;
+  color: aquamarine;
+}
+
+.Intro {
+  display: flex;
+  padding-top: 10%;
+}
+
+.H1Intro {
+  max-width: 50%;
+  padding-right: 20%;
+  text-align: center;
+  justify-self: right;
+}
+
+.Desenho {
+  font-size: 1000%;
+}
