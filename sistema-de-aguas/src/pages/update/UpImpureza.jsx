@@ -14,7 +14,7 @@ const UpImpureza = () => {
     const updateSetWhere = {
       update: "impureza",
       set: `unidade = '${Unidade}', tipo= '${Tipo}', vtotal= ${Vtotal}`,
-      where: `nome = '${Nome}' and idamostra = '${Idamostra}'`,
+      where: `nome = '${Nome}' and idamostra = ${Idamostra}`,
     };
 
     console.log(updateSetWhere);
