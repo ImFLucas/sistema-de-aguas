@@ -178,8 +178,8 @@ CREATE TABLE IF NOT EXISTS impureza
 (
  nome               varchar(15)     NOT NULL,
  idamostra          integer         NOT NULL DEFAULT 11100,
- unidade            varchar(10)     NOT NULL,
- tipo               varchar(10)     NOT NULL,
+ unidade            varchar(20)     NOT NULL,
+ tipo               varchar(20)     NOT NULL,
  vtotal             float         NOT NULL,
  PRIMARY KEY ( nome, idamostra ),
  FOREIGN KEY ( idamostra ) REFERENCES amostra ( identificador )
